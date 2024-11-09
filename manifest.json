@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Element Blocker",
+    "version": "1.0",
+    "permissions": [
+      "tabs"
+    ],
+    "host_permissions": [
+      "*://*.youtube.com/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
