@@ -1,18 +1,27 @@
 {
     "manifest_version": 3,
-    "name": "YouTube Element Blocker",
+    "name": "Youtube Shorts Only",
     "version": "1.0",
-    "permissions": [
-      "tabs"
-    ],
-    "host_permissions": [
-      "*://*.youtube.com/*"
-    ],
-    "content_scripts": [
-      {
-        "matches": ["*://*.youtube.com/*"],
-        "js": ["content.js"]
-      }
-    ]
-  }
-  
+    "description": "An extension containing only Youtube Shorts.",
+
+    "permissions": ["activeTab", "scripting"],
+
+    "background": {
+        "service_worker": "background.js"
+    },
+
+    "action": {
+        "default_popup": "",
+        "default_icon": {
+            "16": "images/s_icon_16.png",
+            "32": "images/s_icon_32.png",
+            "128":"images/s_icon_128.png"
+        }
+    },
+
+    "icons": {
+        "16": "images/s_icon_16.png",
+        "32": "images/s_icon_32.png",
+        "128":"images/s_icon_128.png"
+    }
+}
